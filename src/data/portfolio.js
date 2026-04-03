@@ -61,6 +61,24 @@ export const projects = [
     liveUrl: "#",
     codeUrl: "#",
   },
+  {
+    number: "02",
+    name: "Comandei Platform",
+    description:
+      "Plataforma full stack para gestão de comandas em estabelecimentos alimentícios, incluindo controle de mesas, pedidos, produtos e usuários. Backend desenvolvido em Spring Boot com APIs REST seguras (JWT), persistência com PostgreSQL e JPA/Hibernate, e migrações com Flyway. Arquitetura orientada a domínio com separação clara de responsabilidades, garantindo escalabilidade, manutenibilidade e consistência de dados.",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "JPA / Hibernate",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "JWT",
+      "Flyway",
+    ],
+    liveUrl: "#",
+    codeUrl: "#",
+  },
 ];
 
 export const timeline = [
