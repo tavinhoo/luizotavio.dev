@@ -1,0 +1,50 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Luiz Otávio",
+    "url": "https://github.com/tavinhoo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tavinhoo/luizotavio.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/tavinhoo/luizotavio.dev/issues"
+  },
+  "homepage": "",
+  "keywords": [
+    "portfolio",
+    "developer",
+    "react",
+    "frontend",
+    "web",
+    "luiz-otavio"
+  ],
+  "social": {
+    "github": "https://github.com/tavinhoo",
+    "linkedin": "https://www.linkedin.com/in/se-luizotaviofs/"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
