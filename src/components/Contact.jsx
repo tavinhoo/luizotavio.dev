@@ -101,7 +101,7 @@ export default function Contact() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="seu@email.com"
+                    placeholder="Seu email"
                     required
                   />
                 </div>
