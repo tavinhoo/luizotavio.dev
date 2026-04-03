@@ -7,6 +7,7 @@ export const personal = {
   email: "luizotaviomtbs@gmail.com",
   github: "https://github.com/tavinhoo",
   linkedin: "https://www.linkedin.com/in/se-luizotaviofs/",
+  resume: "https://drive.google.com/drive/folders/1gaQi1rTksDvVNBXeC-gN5iXBprIBNf8T?usp=sharing",
   githubHandle: "github.com/tavinhoo",
   linkedinHandle: "linkedin.com/in/se-luizotaviofs",
 };

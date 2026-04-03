@@ -6,17 +6,40 @@ import './Contact.css';
 export default function Contact() {
   const ref = useFadeIn();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState('idle');
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    // Integre com seu serviço de email aqui (ex: EmailJS, Formspree)
-    console.log('Form submitted:', form);
-    setSent(true);
+    setStatus('sending');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/luizotaviomtbs@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: 'Novo contato pelo portfolio',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Falha no envio');
+      }
+
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus('error');
+    }
   }
 
   return (
@@ -29,7 +52,7 @@ export default function Contact() {
         <div className="contact-grid">
           <div>
             <p className="contact-intro">
-              Estou aberto a novas oportunidades, projetos freelance ou apenas uma boa conversa sobre tecnologia. Me manda uma mensagem.
+              Valorizo boas discussões sobre tecnologia e engenharia de software. Se quiser trocar ideias, estou disponível.
             </p>
             <div className="social-links">
               <a href={personal.github} target="_blank" rel="noreferrer" className="social-link">
@@ -44,11 +67,15 @@ export default function Contact() {
                 <span className="social-name">Email</span>
                 <span className="social-handle">{personal.email}</span>
               </a>
+              <a href={personal.resume} target="_blank" rel="noreferrer" className="social-link">
+                <span className="social-name">Curriculo</span>
+                <span className="social-handle">{personal.resumeHandle}</span>
+              </a>
             </div>
           </div>
 
           <form onSubmit={handleSubmit}>
-            {sent ? (
+            {status === 'success' ? (
               <div className="form-success">
                 Mensagem enviada! Entrarei em contato em breve.
               </div>
@@ -90,8 +117,13 @@ export default function Contact() {
                   />
                 </div>
                 <button type="submit" className="btn-primary">
-                  Enviar mensagem
+                  {status === 'sending' ? 'Enviando...' : 'Enviar mensagem'}
                 </button>
+                {status === 'error' ? (
+                  <div className="form-success">
+                    Nao foi possivel enviar agora. Tente novamente em instantes.
+                  </div>
+                ) : null}
               </>
             )}
           </form>

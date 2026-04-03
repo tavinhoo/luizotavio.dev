@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <span className="footer-copy">© {year} {personal.name}. Todos os direitos reservados.</span>
-      <span className="footer-name">Feito com cuidado.</span>
+      <span className="footer-name">“Simplicity is prerequisite for reliability.”</span>
     </footer>
   );
 }
