@@ -3,7 +3,7 @@ export const personal = {
   initials: "LOFS",
   role: "Software Engineer",
   description:
-    "Desenvolvedor Full Stack com foco em criar experiências digitais elegantes, performáticas e que realmente importam para as pessoas.",
+    "Movido pela curiosidade de entender como as coisas realmente funcionam, construo sistemas escaláveis com foco em arquitetura e engenharia de software de alto nível.",
   email: "luizotaviomtbs@gmail.com",
   github: "https://github.com/tavinhoo",
   linkedin: "https://www.linkedin.com/in/se-luizotaviofs/",
