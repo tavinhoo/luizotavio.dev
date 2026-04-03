@@ -1,0 +1,233 @@
+.about {
+  padding: 6rem 3.5rem;
+  background: var(--gray-800);
+}
+
+/* ── Topo ── */
+.about-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background: var(--gray-500);
+  display: block;
+}
+
+.eyebrow-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  font-weight: 400;
+}
+
+.section-title-solid {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.section-title-outline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gray-600);
+}
+
+.about-top-desc {
+  max-width: 320px;
+  font-size: 0.9rem;
+  color: var(--gray-300);
+  line-height: 1.8;
+  font-weight: 300;
+  text-align: right;
+}
+
+.about-divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 3.5rem;
+}
+
+/* ── Grid ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--gray-200);
+  line-height: 1.9;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-text strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+  font-weight: 400;
+}
+
+.skills-count {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+}
+
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-row:hover .skill-name {
+  color: var(--white);
+}
+
+.skill-row:hover .skill-bar-fill {
+  opacity: 1;
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-row:hover .skill-name {
+  color: var(--white);
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-group:last-child {
+  border-bottom: none;
+}
+
+.skill-group-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  white-space: nowrap;
+  padding-top: 3px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  font-size: 0.78rem;
+  color: var(--gray-200);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 0.25rem 0.6rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 768px) {
+  .about { padding: 4rem 1.5rem; }
+  .about-top { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .about-top-desc { text-align: left; max-width: 100%; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
