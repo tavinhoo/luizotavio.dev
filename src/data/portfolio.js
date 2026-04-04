@@ -59,7 +59,7 @@ export const projects = [
       "Plataforma de controle financeiro projetada com arquitetura moderna (Hexagonal/Clean Architecture), oferecendo gerenciamento de clientes, transações e fluxo de caixa com alta escalabilidade e baixo acoplamento entre as camadas da aplicação.",
     tags: ["Node.js", "TypeScript", "Drizzle ORM", "PostgreSQL", "Hexagonal Architecture"],
     liveUrl: "#",
-    codeUrl: "#",
+    codeUrl: "https://github.com/tavinhoo/luizotavio.dev",
   },
   {
     number: "02",
